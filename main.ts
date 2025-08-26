@@ -34,7 +34,7 @@ namespace CMidi {
 
     //% block="when measure %measure starts"
     //% block.loc.nl="wanneer maat %measure begint"
-    export function onMeasure(measure: number, programmableCode: (measure: number) => void): void {
+    export function onMeasure(programmableCode: (measure: number) => void): void {
         measureHandler = programmableCode;
     }
 
