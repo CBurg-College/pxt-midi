@@ -20,11 +20,13 @@
 
 let MEASURE = 0
 
-type measurehandler = (measure: number) => void
-let measureHandler: measurehandler
+let measureHandler: handler
 
 radio.onReceivedNumber(function (cmd: number) {
-    if ((cmd < 0) && measureHandler) measureHandler(-cmd)
+    if (cmd < 0) {
+        MEASURE = -cmd
+        if (measureHandler) measureHandler()
+    }
 })
 
 //% color="#00CC00" icon="\uf1f9"
@@ -32,9 +34,15 @@ radio.onReceivedNumber(function (cmd: number) {
 //% block.loc.nl="Midi"
 namespace CMidi {
 
-    //% block="when measure %measure starts"
-    //% block.loc.nl="wanneer maat %measure begint"
-    export function onMeasure(measure: number, programmableCode: () => void): void {
+    //% block="measure number"
+    //% block.loc.nl="maatnummer"
+    export function measure() : number {
+        return MEASURE
+    }
+
+    //% block="when a new measure starts"
+    //% block.loc.nl="wanneer een volgende maat begint"
+    export function onMeasure(programmableCode: () => void): void {
         measureHandler = programmableCode;
     }
 
