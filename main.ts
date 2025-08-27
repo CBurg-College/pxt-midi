@@ -21,25 +21,45 @@
 let MEASURE = 0
 
 enum Move {
+    //% block="move 1"
     Move1,
+    //% block="move 2"
     Move2,
+    //% block="move 3"
     Move3,
+    //% block="move 4"
     Move4,
+    //% block="move 5"
     Move5,
+    //% block="move 6"
     Move6,
+    //% block="move 7"
     Move7,
+    //% block="move 8"
     Move8,
+    //% block="move 9"
     Move9,
+    //% block="move 10"
     Move10,
+    //% block="move 11"
     Move11,
+    //% block="move 12"
     Move12,
+    //% block="move 13"
     Move13,
+    //% block="move 14"
     Move14,
+    //% block="move 15"
     Move15,
+    //% block="move 16"
     Move16,
+    //% block="move 17"
     Move17,
+    //% block="move 18"
     Move18,
+    //% block="move 19"
     Move19,
+    //% block="move 20"
     Move20,
 }
 
@@ -110,28 +130,28 @@ namespace CMidi {
 
     //% block="do for move %move"
     //% block.loc.nl="doe voor move %move"
-    export function onMove(move: number, programmableCode: () => void): void {
+    export function onMove(move: Move, programmableCode: () => void): void {
         switch (move) {
-            case 1: doMove1 = programmableCode; break;
-            case 2: doMove2 = programmableCode; break;
-            case 3: doMove3 = programmableCode; break;
-            case 4: doMove4 = programmableCode; break;
-            case 5: doMove5 = programmableCode; break;
-            case 6: doMove6 = programmableCode; break;
-            case 7: doMove7 = programmableCode; break;
-            case 8: doMove8 = programmableCode; break;
-            case 9: doMove9 = programmableCode; break;
-            case 10: doMove10 = programmableCode; break;
-            case 11: doMove11 = programmableCode; break;
-            case 12: doMove12 = programmableCode; break;
-            case 13: doMove13 = programmableCode; break;
-            case 14: doMove14 = programmableCode; break;
-            case 15: doMove15 = programmableCode; break;
-            case 16: doMove16 = programmableCode; break;
-            case 17: doMove17 = programmableCode; break;
-            case 18: doMove18 = programmableCode; break;
-            case 19: doMove19 = programmableCode; break;
-            case 20: doMove20 = programmableCode; break;
+            case Move.Move1: doMove1 = programmableCode; break;
+            case Move.Move2: doMove2 = programmableCode; break;
+            case Move.Move3: doMove3 = programmableCode; break;
+            case Move.Move4: doMove4 = programmableCode; break;
+            case Move.Move5: doMove5 = programmableCode; break;
+            case Move.Move6: doMove6 = programmableCode; break;
+            case Move.Move7: doMove7 = programmableCode; break;
+            case Move.Move8: doMove8 = programmableCode; break;
+            case Move.Move9: doMove9 = programmableCode; break;
+            case Move.Move10: doMove10 = programmableCode; break;
+            case Move.Move11: doMove11 = programmableCode; break;
+            case Move.Move12: doMove12 = programmableCode; break;
+            case Move.Move13: doMove13 = programmableCode; break;
+            case Move.Move14: doMove14 = programmableCode; break;
+            case Move.Move15: doMove15 = programmableCode; break;
+            case Move.Move16: doMove16 = programmableCode; break;
+            case Move.Move17: doMove17 = programmableCode; break;
+            case Move.Move18: doMove18 = programmableCode; break;
+            case Move.Move19: doMove19 = programmableCode; break;
+            case Move.Move20: doMove20 = programmableCode; break;
         }
     }
 
