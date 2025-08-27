@@ -128,8 +128,8 @@ namespace CMidi {
         return MEASURE
     }
 
-    //% block="do for move %move"
-    //% block.loc.nl="doe voor move %move"
+    //% block="do for %move"
+    //% block.loc.nl="doe voor %move"
     export function onMove(move: Move, programmableCode: () => void): void {
         switch (move) {
             case Move.Move1: doMove1 = programmableCode; break;
