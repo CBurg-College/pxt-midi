@@ -120,7 +120,7 @@ radio.onReceivedNumber(function (cmd: number) {
 //% color="#00CC00" icon="\uf1f9"
 //% block="Midi"
 //% block.loc.nl="Midi"
-namespace CMidi {
+namespace Midi {
 
     //% block="measure number"
     //% block.loc.nl="maatnummer"
